@@ -1,5 +1,5 @@
 # datafun-02-functions
-
+jakiel
 > Practice with built-in functions, creating functions, creating methods (functions in a class), and employing statistical functions
 
 ## Prerequisite
