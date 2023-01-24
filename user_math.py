@@ -1,4 +1,6 @@
 """
+Jakiel David  1/21/2023
+
 Always start with a docstring that describes what the module does.
 Include your name and the date.
 
@@ -27,7 +29,7 @@ def get_area_of_lot(length, width):
     # Use a try / except / finally block when something 
     # could go wrong
     try: 
-        area = 0 # fix this
+        area = length * width
         return area
     except Exception as ex:
         print(f"Error: {ex}")
@@ -35,6 +37,32 @@ def get_area_of_lot(length, width):
 
 
 # define more functions here (see instuctions)
+###Write and call 3 functions here atleast 1 should use math module eg math.fsum()
+import math
+def monthly_visitors(yearly_visitors,month):
+    """"Calculates the monthly visitors to Trinidad based on stastic 1.562m pop"""
+    return math.ceil(yearly_visitors/12 * month)
+
+def population_density(population, area):
+    """Calculates the population density of Trinidad"""
+    return population / area
+
+def usd_to_ttd(amount, rate):
+    """Convert US dollar  to Trinidad & Tobago Dollar"""
+    try:
+        result = amount * rate
+    except Exception as ex:
+        print()
+        print(f"Error: {ex}")
+        return None
+    finally:
+        print("Currency conversion complete.")
+    return result
+
+
+
+
+
 
 
 
@@ -47,6 +75,23 @@ def get_area_of_lot(length, width):
 # (as opposed to being imported by another module)
 # Literally: "if this module name == the name of the main module"
 if __name__ == "__main__":
-
-    # call your functions here (see instructions)
-    print("your code here")
+    print("Explore some functions in the math module")
+    print()
+    print(f"math.comb(5,1) = {math.comb(5,1)}")
+    print(f"math.perm(5,1) = {math.perm(5,1)}")
+    print()
+    print(f"math.comb(5,3) = {math.comb(5,3)}")
+    print(f"math.perm(5,3) = {math.perm(5,3)}")
+    print()
+    print("area of lot")
+    print(get_area_of_lot(6, 2))
+    print()
+    print("Trinidad_monthly_visitors:", monthly_visitors(1526000,1))
+    print()
+    print("Population density:", population_density(1526000, 1920))
+    print()                             
+    print("Convert USD to Trinidad & Tobago Dollars")
+    print(usd_to_ttd(1,6.79))
+    print(usd_to_ttd("1",6.79))
+                     
+   
